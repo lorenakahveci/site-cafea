@@ -1,0 +1,494 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  figure {
+    margin: 0 auto;
+  }
+
+  ul {
+    list-style: none;
+  }
+  header {
+    section:first-child {
+      background-color: rgb(250, 5, 5);
+      color: white;
+      //position: fixed;
+      line-height: 35px;
+      //top: 0;
+      font-weight: 700;
+      font-size: 16px;
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+
+      a {
+        color: white;
+      }
+    }
+
+    // A doua linie
+    section:nth-child(2) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 9px 0;
+      justify-content: space-around;
+
+      @media (max-width: 992px) {
+        justify-content: center;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        i {
+          padding: 5px;
+        }
+      }
+
+      div:first-child,
+      div:nth-child(4) {
+        border-right: 1px solid black;
+        padding-right: 15px;
+      }
+
+      div:nth-child(2) {
+        padding: 0 15px 0 25px;
+      }
+
+      div:nth-child(3) {
+        width: 35%;
+
+        figure {
+          width: 150px;
+        }
+
+        @media (max-width: 992px) {
+          display: none;
+        }
+      }
+
+      div:nth-child(5) {
+        padding-left: 12px;
+
+        i {
+          font-size: 24px;
+          color: #be8c69;
+        }
+
+        span:nth-child(3) {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background-color: #ff4637;
+          position: absolute;
+          transform: translateX(20px) translateY(-14px);
+        }
+      }
+    }
+
+    // A treia linie
+
+    section:nth-child(3) {
+      background-image: url("https://www.beanzcafe.ro/static/version1724679613/frontend/ISM/romania/default/images/top-nav-bg.jpg");
+      background-position: center center;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        height: 64px;
+        justify-content: space-around;
+
+        ul {
+          display: flex;
+          color: white;
+          align-items: center;
+          font-weight: 800;
+          font-size: 15px;
+
+          li {
+            margin: 0 15px;
+          }
+
+          li:hover {
+            color: #c99032;
+          }
+        }
+
+        div {
+          width: 102px;
+          height: 43px;
+          padding: 8px 5px;
+          background-color: #ff4637;
+          font-size: 15px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          border-radius: 5px;
+
+          @media (max-width: 992px) {
+            display: none;
+          }
+
+          span:first-child {
+            background-image: url("https://www.beanzcafe.ro/static/version1724679613/frontend/ISM/romania/default/images/link-icon-taste.png");
+            width: 28px;
+            height: 27px;
+            display: inline-block;
+          }
+
+          span:nth-child(2) {
+            padding-top: 3px;
+            font-weight: 800;
+            font-size: 14px;
+          }
+        }
+
+        div:hover {
+          background: #c99032;
+        }
+      }
+    }
+  }
+
+  //Cream prima sectiune - titlul paginii de produse
+
+  main {
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      width: 740px;
+    }
+
+    @media (min-width: 992px) {
+      width: 960px;
+    }
+
+    @media (min-width: 1260px) {
+      width: 1220px;
+    }
+
+    @media (min-width: 1530px) {
+      width: 1520px;
+    }
+
+    section:first-child {
+      h1 {
+        width: 30px;
+        color: #502d14;
+        position: relative;
+        text-align: left;
+        text-transform: none;
+        margin-bottom: 0;
+        margin-top: 20px;
+        padding-bottom: 5px;
+        padding-bottom: 10px;
+        font-size: 45px;
+        display: block;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #be8c69;
+        letter-spacing: 0.4px;
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+    }
+
+    section.sectiune_carusel {
+      width: 70%;
+      margin: auto;
+    }
+    section.sectiune_produse {
+      max-width: 1210px;
+      margin: 0 auto;
+
+      ol {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+
+        > * {
+          padding: 0 12px;
+          list-style: none;
+
+          @media (max-width: 479px) {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+
+          @media (max-width: 639px) and (min-width: 480px) {
+            width: 50%;
+            margin-bottom: 30px;
+          }
+
+          @media (min-width: 640px) {
+            width: 33.333%;
+          }
+
+          > p {
+            display: block;
+            background-color: #f0aa3c;
+            width: 130px;
+            height: 40px;
+            font-size: 12px;
+            color: white;
+            font-weight: 900;
+            text-align: center;
+            margin: auto;
+            padding-top: 10px;
+
+            @media (max-width: 479px) {
+              transform: translateY(-50vw);
+            }
+
+            @media (max-width: 639px) and (min-width: 480px) {
+              transform: translateY(-25vw);
+            }
+
+            @media (min-width: 640px) {
+              transform: translateY(-18vw);
+            }
+
+            @media (min-width: 1210px) {
+              transform: translateY(-200px);
+            }
+          }
+
+          div {
+            text-align: left;
+            color: #502d14;
+
+            h3 {
+              font-size: 1.09em;
+              font-weight: 600;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            p {
+              height: 22px;
+              overflow: hidden;
+              font-size: 14px;
+              font-weight: 500;
+            }
+            form {
+              display: block;
+              height: 50px;
+              min-width: 70px;
+              border: 1px solid #bfbfbf;
+              float: left;
+              margin: 0 auto 15px auto;
+            }
+
+            > i {
+              color: #b9aaa0;
+              width: 19px;
+              font-size: 14px;
+              font-weight: 900;
+              text-align: center;
+              font-family: "Font Awesome 6 Free";
+            }
+            input {
+              height: 48px;
+              width: 40px;
+              max-width: 100%;
+              text-align: center;
+              padding: 0;
+              border-top: none;
+              border-bottom: none;
+              font-size: 17px;
+              color: #502d14;
+            }
+            button {
+              padding-right: 7px;
+              margin-left: 15px;
+              text-align: center;
+              color: #ff4637;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Creare footer din 3 sectiuni
+  footer {
+    > section:first-child {
+      background-image: url("https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTcxMzA4Ni13aWtpbWVkaWEtaW1hZ2Utam9iNTcyLTEuanBn.jpg");
+      background-repeat: no-repeat;
+      background-position: 0;
+      background-size: cover;
+      border-top: 0 solid #bfbfbf;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 20px;
+      color: white;
+
+      > div {
+        h2 {
+          font-size: 18px;
+          font-weight: 400px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #be8c69;
+          letter-spacing: 0.7px;
+        }
+        ul {
+          li {
+            font-size: 14px;
+            font-weight: 800;
+            color: #fff;
+            padding-bottom: 5px;
+            display: block;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+          }
+          li:hover {
+            color: #c99032;
+          }
+          i {
+            border: 2px solid #c38631;
+            border-width: 2px;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 30px;
+            align-items: center;
+          }
+          img {
+            max-width: 100%;
+            height: auto;
+            border: 0;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    > section:nth-child(2) {
+      p {
+        text-align: center;
+        border-bottom: 1px solid #bfbfbf;
+
+        img {
+          width: 5%;
+          max-width: none;
+          margin: 0 auto;
+          display: block;
+          padding-top: 25px;
+          padding-bottom: 14px;
+        }
+      }
+    }
+    > section:last-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 0;
+
+      li {
+        width: 40%;
+        margin-bottom: 15px;
+        align-items: center;
+        color: #afa7a4;
+      }
+      span {
+        text-align: center;
+        width: 60%;
+        color: #afa7a4;
+      }
+    }
+  }
+}
+
+/*
+    section:nth-child(3) {
+      margin: 20px auto;
+      border: 1px solid #bbb;
+
+      @media (min-width: 768px) {
+        width: 740px;
+      }
+
+      @media (min-width: 992px) {
+        width: 960px;
+      }
+
+      @media (min-width: 1260px) {
+        width: 1220px;
+      }
+
+      @media (min-width: 1530px) {
+        width: 1520px;
+      }
+
+      h2 {
+        background-color: beige;
+        width: 100%;
+      }
+
+      h2:hover {
+        background-color: bisque;
+      }
+
+      article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        > div {
+          width: 50px%;
+          border: 1px solid #eee;
+
+          @media (min-width: 768px) {
+            width: 243px;
+          }
+
+          @media (min-width: 992px) {
+            width: 237px;
+          }
+
+          @media (min-width: 1260px) {
+            width: 242px;
+          }
+
+          @media (min-width: 1530px) {
+            width: 302px;
+          }
+
+          h3 {
+            height: 57px;
+            overflow: hidden;
+            font-size: 15px;
+          }
+        }
+
+        nav {
+          width: 33%;
+          border: 1px solid lightblue;
+        }
+      }
+    }
+    */
